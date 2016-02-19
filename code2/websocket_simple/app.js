@@ -19,7 +19,7 @@ setInterval(function() {
       var i = Math.floor(Math.random() * 1000) + 1  
       io.sockets.emit('data', i);
       console.log(i);
-}, 1000);
+}, 10);
 
 
 
