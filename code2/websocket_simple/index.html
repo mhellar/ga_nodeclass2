@@ -9,8 +9,10 @@
 <body>
 <script>
 var socket = io.connect('//localhost:3000');
-    socket.on('data', function(data) {
+    //listen for data on websocket called my socket
+    socket.on('mysocket', function(data) {
         console.log(data);
+        //Jquery has getters and setters
         $('#incoming').text(data);
     });
     socket.on('error', function() {
