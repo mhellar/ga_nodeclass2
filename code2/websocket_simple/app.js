@@ -17,7 +17,8 @@ app.get('/', function(req, res) {
 
 setInterval(function() {
       var i = Math.floor(Math.random() * 1000) + 1  
-      io.sockets.emit('data', i);
+      //emit data on a websocket called mysocket
+      io.sockets.emit('mysocket', i);
       console.log(i);
 }, 10);
 

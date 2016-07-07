@@ -37,15 +37,13 @@ function queryBart(){
 //choose which bart staion to to monitor, station abbreviations are here: http://api.bart.gov/docs/overview/abbrev.aspx
 bart.on('powl', function(estimates){
    //log the results to the console
-   // console.log(estimates); 
+   console.log(estimates); 
 
-   console.log(estimates[0].hexcolor);
-   var hexcolor = estimates[0].hexcolor;
-
-   io.sockets.emit('data', hexcolor);
+   
    // store the results in some variables
    var nextTrainNorth = "next train in " + estimates[0].minutes;
    var destSouth = "Dest: " + estimates[0].destination;
+   io.sockets.emit('mysocket',nextTrainNorth + " minutes" + " destination is " + estimates[5].destination + " Direction is " + estimates[5].direction);
    // call the function
    speak(nextTrainNorth + " minutes" + " destination is " + estimates[5].destination + " Direction is " + estimates[5].direction);
    }, 1000);

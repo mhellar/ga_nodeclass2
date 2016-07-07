@@ -8,9 +8,9 @@
 <body>
 <script>
 var socket = io.connect('//localhost:3000');
-    socket.on('data', function(data) {
+    socket.on('mysocket', function(data) {
         console.log(data);
-        $("body").css('background-color', data);
+        $('#incoming').text(data);
 
     });
     socket.on('error', function() {
