@@ -48,7 +48,7 @@ bart.on('powl', function(estimates){
    var destSouth = "Dest: " + estimates[0].destination;
    // call the function
    speak(nextTrainNorth + " minutes" + " destination is " + estimates[5].destination + " Direction is " + estimates[5].direction);
-   }, 5000);
+   }, 1000);
 }
 
 queryBart();
