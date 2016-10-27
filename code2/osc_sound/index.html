@@ -57,37 +57,37 @@ var socket = io.connect('//localhost:3000');
 
 //Function to parse incoming data
     function parse(incoming){
-    if (incoming[0] == '/1/push1' && incoming[1] == 1) {
+    if (incoming[0] == '/2/push1' && incoming[1] == 1) {
         console.log("beep");
         sound.play();
         $('#gif').attr('src', "img/butter.gif");
 
-    } else if (incoming[0] == '/1/push2' && incoming[1] == 1) {
+    } else if (incoming[0] == '/2/push2' && incoming[1] == 1) {
         console.log("beep2");
         sound1.play();
         $('#gif').attr('src', "img/dots.gif");
 
-    } else if (incoming[0] == '/1/push3' && incoming[1] == 1) {
+    } else if (incoming[0] == '/2/push3' && incoming[1] == 1) {
         console.log("beep3");
         sound2.play();
         $('#gif').attr('src', "img/phone.gif");
 
-    } else if (incoming[0] == '/1/push4' && incoming[1] == 1) {
+    } else if (incoming[0] == '/2/push4' && incoming[1] == 1) {
         console.log("beep4");
         sound3.play();
         $('#gif').attr('src', "img/dots.gif");
         
-    } else if (incoming[0] == '/1/push5' && incoming[1] == 1) {
+    } else if (incoming[0] == '/2/push5' && incoming[1] == 1) {
         console.log("beep4");
         sound4.play();
         $('#gif').attr('src', "img/waves.gif");
         
-    } else if (incoming[0] == '/1/push6' && incoming[1] == 1) {
+    } else if (incoming[0] == '/2/push6' && incoming[1] == 1) {
         console.log("beep4");
         sound5.play();
         $('#gif').attr('src', "img/butter.gif");
 
-    } else if (incoming[0] == '/1/push7' && incoming[1] == 1) {
+    } else if (incoming[0] == '/2/push7' && incoming[1] == 1) {
         console.log("beep4");
         sound6.play();
         $('#gif').attr('src', "img/butter.gif");
