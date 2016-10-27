@@ -30,13 +30,16 @@
     <div class="reveal">
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
+<!--         <section>
+        <div id="viz2"></div>
+        </section> -->
             <section data-background="img/nodejs.png">
             </section>
             <section>
                 <section>
                     <h3>Code is here:</h3>
                     <br>
-                    <a href="http://bit.ly/1NIy3oH">http://bit.ly/1NIy3oH</a>
+                    <a href="http://bit.ly/2eWU4DL">http://bit.ly/2eWU4DL</a>
                     <br>
                 </section>
             </section>
@@ -57,7 +60,7 @@
                     <a href="http://expressjs.com/">Express</a>
                 </section>
                 <section>
-                <p>Hello World</p>
+                    <p>Hello World</p>
                     <pre><code>
 var express = require('express');
 var app = express();
@@ -72,7 +75,7 @@ app.listen(3000, function () {
   </code></pre>
                 </section>
                 <section>
-                <p>We can also serve files:</p>
+                    <p>We can also serve files:</p>
                     <ul>
                         <li>Make a new folder called webserver</li>
                         <li class="fragment">Open the terminal and type 'cd' + SPACE + drag folder onto the terminal</li>
@@ -139,8 +142,8 @@ app.get('/', function(req, res) {
                 <p>use nodemon in place of node and your app will restart anytime you save a change.</p>
             </section>
             <section>
-            <p>Websockets:</p>
-             <p>HTML5 WebSocket represents the first major upgrade in the history of web communications. Before WebSocket, all communication between web clients and servers relied only on HTTP. Now, dynamic data can flow freely over WebSocket connections that are persistent (always on), full duplex (simultaneously bi-directional) and blazingly fast.</p>   
+                <p>Websockets:</p>
+                <p>HTML5 WebSocket represents the first major upgrade in the history of web communications. Before WebSocket, all communication between web clients and servers relied only on HTTP. Now, dynamic data can flow freely over WebSocket connections that are persistent (always on), full duplex (simultaneously bi-directional) and blazingly fast.</p>
             </section>
             <section>
                 <h3>Socket.io</h3>
@@ -284,6 +287,10 @@ var client = new Twitter({
     </div>
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
+    <script src="js/p5.js" type="text/javascript"></script>
+    <script src="js/p5.dom.js" type="text/javascript"></script>
+    <script src="js/p5.sound.js" type="text/javascript"></script>
+    <script src="sketch.js" type="text/javascript"></script>
     <script>
     // Full list of configuration options available at:
     // https://github.com/hakimel/reveal.js#configuration
