@@ -5,8 +5,7 @@
   "dependencies": {
     "cfonts": "0.0.13",
     "express": "4.10.2",
-    "johnny-five": "^0.8.98",
-    "serialport": "^1.7.4",
+    "johnny-five": "^0.10.3",
     "socket.io": "1.2.0"
   }
 }
