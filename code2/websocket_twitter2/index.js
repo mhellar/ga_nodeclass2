@@ -37,7 +37,7 @@ function sendTweet(){
 
 client.stream('statuses/filter', {
   // laughing crying emoji: the most popular emoji
-  track: 'trump'
+  track: 'art'
 }, function(tweetStream) {
 
   // `tweetStream` will emit a "data" event whenever

@@ -8,7 +8,7 @@
 </head>
 <body>
 <script>
-var socket = io.connect('//localhost:3000');
+var socket = io.connect(window.location.origin);
     socket.on('data', function(data) {
         console.log(data);
         $('#incoming').text(data);
