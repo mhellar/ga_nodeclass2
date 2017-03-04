@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="lib/css/zenburn.css">
     <!-- Printing and PDF exports -->
     <script>
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-    document.getElementsByTagName('head')[0].appendChild(link);
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
     </script>
     <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
@@ -31,123 +31,126 @@
             <section>
                 <figure>
                     <h2 class="intro">NodeJS: 3</h2 class="intro">
-                        <h2 class="intro">NodeJS: 3</h2 class="intro">
-                        <h2 class="intro">NodeJS: 3</h2 class="intro">
-                        <h2 class="intro">NodeJS: 3</h2 class="intro">                  
-                    </figure>
-                </section>
+                    <h2 class="intro">NodeJS: 3</h2 class="intro">
+                    <h2 class="intro">NodeJS: 3</h2 class="intro">
+                    <h2 class="intro">NodeJS: 3</h2 class="intro">
+                </figure>
+            </section>
 
-                <section data-background="img/72-points-mesh.svg" data-background-transition="zoom">
-                    <p><b>Slides are here: <br>http://mhellar.github.io/ga_nodeclass2/3</b></p>
-                    <br>
-                    <p><b>Grab the code here: <br><a href="http://bit.ly/2ePLlny">http://bit.ly/2ePLlny</a></b></p>
-                </section>
+            <section data-background="img/72-points-mesh.svg" data-background-transition="zoom">
+                <p><b>Slides are here: <br>http://mhellar.github.io/ga_nodeclass2/3</b></p>
+                <br>
+                <p><b>Grab the code here: <br><a href="http://bit.ly/2ePLlny">http://bit.ly/2ePLlny</a></b></p>
+            </section>
 
+
+            <section>
+                <ul>
+                    <h3>Topics for This Week:</h3>
+
+                    <li class="fragment">Javascipt Robotics</li>
+                    <li class="fragment"><a href="http://johnny-five.io">Johhny Five</a></li>
+                    <li class="fragment">Twitter Lamp</li>
+                    <li class="fragment">Twitter Button</li>
+                </ul>
+            </section>
+
+            <section>
+                <p>Packages to connect with Arduino</p><br>
+                <p><a href=" https://www.npmjs.com/package/serialport">Serialport Module</a></p><br>
+            </section>
+            <section>
+                <p>Packages to connect with Arduino</p><br>
+                <p><a href="https://www.npmjs.com/package/johnny-five">Johnny-Five</a></p><br>
+                <p><a href="http://johnny-five.io/">http://johnny-five.io/</a></p><br>
+            </section>
+
+            <section>
+                <p>We have to use a specific version of Node for these modules</p><br>
+                <p>Type 'sudo npm install n -g'</p><br>
+                <p>Type 'sudo n 0.12.0'</p><br>
+            </section>
+
+            </section>
+            <section>
+                <section>
+                    <h4>Project 1</h4>
+                    <p>Connect a potentiometer</p>
+                    <img src="img/1.png" height="500">
+                    <a href="#" class="navigate-down">
+                    </a>
+                </section>
+                <section>
+                    <h4>Project 1</h4>
+                    <p>Connect a potentiometer</p>
+                    <img src="img/2.png" height="500">
+
+                </section>
 
                 <section>
+                    <h4>Project 1</h4>
+                    <p>1: Upload AnalogInOutSerial.ino to arduino from AnalogInOutSerial in the code folder</p><br>
+                    <p>2: Run node index.js from the serialbasic from serialbasic in the code folder</p>
+
+                    </a>
+                </section>
+                <section>
+                    <h4>Project 1</h4>
+                    <p>1: Run node index.js from the serialbasic from serial_ws in the code folder</p><br>
+                    <p>2: Open web browser go to
+                        <a href="http://localhost:3000"></a>http://localhost:3000</p>
+
+                    </a>
+                </section>
+
+
+                <section data-background="img/johnny-five-fb.png" data-background-transition="zoom">
+
+                </section>
+                <section data-background="img/sc_poster.jpg" data-background-size="600px" data-background-transition="zoom">
+
+                </section>
+
+                <section>
+                    <p>
+                        Johnny-Five is the original JavaScript Robotics programming framework. Released by Bocoup in 2012, Johnny-Five is maintained by a community of passionate software developers and hardware engineers. Over 75 developers have made contributions towards building
+                        a robust, extensible and composable ecosystem.
+                    </p>
+                </section>
+
+                <section data-background="img/led_1.png" data-background-size="1000px" data-background-transition="zoom">
+
+                </section>
+
+                <section>
+                    <h3>Starting a new Node app</h3>
                     <ul>
-                        <h3>Topics for This Week:</h3>
-                        
-                         <li class="fragment">Javascipt Robotics</li>
-                         <li class="fragment"><a href="http://johnny-five.io">Johhny Five</a></li>
-                         <li class="fragment">Deploying a public node app</li>
-                    </ul>
-                </section>
-                
-                    <section>
-                        <p>Packages to connect with Arduino</p><br>
-                        <p><a href=" https://www.npmjs.com/package/serialport">Serialport Module</a></p><br>
-                    </section>
-                    <section>
-                        <p>Packages to connect with Arduino</p><br>
-                        <p><a href="https://www.npmjs.com/package/johnny-five">Johnny-Five</a></p><br>
-                        <p><a href="http://johnny-five.io/">http://johnny-five.io/</a></p><br>
-                    </section>
-
-                    <section>
-                        <p>We have to use a specific version of Node for these modules</p><br>
-                        <p>Type 'sudo npm install n -g'</p><br>
-                        <p>Type 'sudo n 0.12.0'</p><br>
-                    </section>
-
-                    </section>
-                    <section>
-                    <section>                    
-                        <h4>Project 1</h4>
-                        <p>Connect a potentiometer</p>
-                        <img src="img/1.png" height="500">
-                        <a href="#" class="navigate-down">
-                        </a>
-                </section>
-                <section>                    
-                        <h4>Project 1</h4>
-                        <p>Connect a potentiometer</p>
-                        <img src="img/2.png" height="500">
-                      
-                </section>
-    
-                <section>                    
-                        <h4>Project 1</h4>
-                        <p>1: Upload AnalogInOutSerial.ino to arduino from AnalogInOutSerial in the code folder</p><br>
-                        <p>2: Run node index.js from the serialbasic from serialbasic in the code folder</p>
-                  
-                        </a>
-                </section>
-                <section>                    
-                        <h4>Project 1</h4>
-                        <p>1: Run node index.js from the serialbasic from serial_ws in the code folder</p><br>
-                        <p>2: Open web browser go to <a href="http://localhost:3000"></a>http://localhost:3000</p>
-                  
-                        </a>
-                </section>
-
-   
-                <section data-background="img/johnny-five-fb.png" data-background-transition="zoom">             
-                        
-                </section>
-                <section data-background="img/sc_poster.jpg" data-background-size="600px" data-background-transition="zoom">             
-                        
-                </section>
-
-                <section>             
-                        <p>
-                        Johnny-Five is the original JavaScript Robotics programming framework. Released by Bocoup in 2012, Johnny-Five is maintained by a community of passionate software developers and hardware engineers. Over 75 developers have made contributions towards building a robust, extensible and composable ecosystem.
-                        </p>
-                </section>
-
-                <section data-background="img/led_1.png" data-background-size="1000px" data-background-transition="zoom">             
-                        
-                </section>
-
-                <section>         
-                        <h3>Starting a new Node app</h3>       
-                        <ul>          
                         <li>Create a new folder named, 'J5_led_1'</li>
                         <li class="fragment">Open the terminal</li>
                         <li class="fragment">type 'cd' & space</li>
                         <li class="fragment">drag your folder to the terminal and hit return</li>
-                        </ul>
+                    </ul>
                 </section>
-                <section> 
-                               
-                        <ul>          
+                <section>
+
+                    <ul>
                         <li>Now we are in our new folder in the terminal</li>
                         <li class="fragment">Type 'npm init' & hit return</li>
                         <li class="fragment">fill out the questions</li>
                         <li class="fragment">drag your folder onto Sublime Text</li>
-                        </ul>
+                    </ul>
                 </section>
-                <section> 
-                        <ul>          
+                <section>
+                    <ul>
                         <li>type 'npm install johnny-five --save</li>
                         <li class="fragment">Have a look at the package.json file that was generated</li>
                         <li class="fragment">This stores metadata about our app</li>
-                        </ul>
+                    </ul>
                 </section>
 
-                <section>                    
-                <b><p>contents of package.json</p></b></br>
-                        <code class="hljs" data-trim contenteditable><pre>
+                <section>
+                    <b><p>contents of package.json</p></b></br>
+                    <code class="hljs" data-trim contenteditable><pre>
 {
   "name": "J5_led_1",
   "version": "1.0.0",
@@ -166,9 +169,9 @@
                         </code>
                 </section>
 
-                <section>                        
-                        <h3>create a new file, enter the following code and save as index.js in your new folder</h3>
-                                                <code class="hljs" data-trim contenteditable><pre>
+                <section>
+                    <h3>create a new file, enter the following code and save as index.js in your new folder</h3>
+                    <code class="hljs" data-trim contenteditable><pre>
 var five = require("johnny-five");
 var board = new five.Board();
 
@@ -179,15 +182,15 @@ board.on("ready", function() {
 </pre>
                         </code>
                 </section>
-<section> 
-                        <ul>          
+                <section>
+                    <ul>
                         <li>Upload firmata to arduino</li>
                         <li class="fragment">run 'node index.js' at the terminal</li>
-                        </ul>
+                    </ul>
                 </section>
-               <section>                        
-                        <h3>try a pulse</h3>
-                                                <code class="hljs" data-trim contenteditable><pre>
+                <section>
+                    <h3>try a pulse</h3>
+                    <code class="hljs" data-trim contenteditable><pre>
 var five = require("johnny-five");
 var board = new five.Board();
 
@@ -198,9 +201,9 @@ led.pulse(500);
 </pre>
                         </code>
                 </section>
-                                <section>                    
-                <b><p>Led Animations</p></b></br>
-<code class="hljs" data-trim contenteditable><pre>
+                <section>
+                    <b><p>Led Animations</p></b></br>
+                    <code class="hljs" data-trim contenteditable><pre>
 var five = require("johnny-five");
 var board = new five.Board();
 
@@ -220,41 +223,42 @@ led.pulse({
                         </code>
                 </section>
 
-                 <section>                    
-                        <p>Reference</i></p><br>
-                        <a href="http://johnny-five.io/api/led/">LED API</a><br>
-                        <a href="http://johnny-five.io/api/animation/#segment-properties">Animation API</a><br>
-                        <a href="http://johnny-five.io/api/">Full API</a>
-
-                </section>
-                
-              
-
-                </section>
-
-                
                 <section>
-                    
-                    <section>
-                        <h3>Project: Twitter Lamp</h3>
-                        <img src="img/Twitter_logo_blue.png" height="400"><img src="img/botrobot.jpg" height="400">
-                    </section>
-                    <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                        <h3>Keep the same circuit</h3>
-                    </section>
-                    <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                        <h3>Go Here:</h3><br>
-                        <a href="https://apps.twitter.com/">https://apps.twitter.com/</a>
-                        <img src="img/twit.png" height="400"><br>
-                        <h3>create a new app</h3>
-                    </section>
-                    <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                        <h3>Gather tokens and keys</h3><br>
-                        <img src="img/tw_tokens.png" height="400"><br>
-                    </section>
-                                                   <section>                    
-                <b><p>Update code in code/twitter-ard/app.js</p></b></br>
-<code class="hljs" data-trim contenteditable><pre>
+                    <p>Reference</i>
+                    </p><br>
+                    <a href="http://johnny-five.io/api/led/">LED API</a><br>
+                    <a href="http://johnny-five.io/api/animation/#segment-properties">Animation API</a><br>
+                    <a href="http://johnny-five.io/api/">Full API</a>
+
+                </section>
+
+
+
+            </section>
+
+
+            <section>
+
+                <section>
+                    <h3>Project: Twitter Lamp</h3>
+                    <img src="img/Twitter_logo_blue.png" height="400"><img src="img/botrobot.jpg" height="400">
+                </section>
+                <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                    <h3>Keep the same circuit</h3>
+                </section>
+                <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                    <h3>Go Here:</h3><br>
+                    <a href="https://apps.twitter.com/">https://apps.twitter.com/</a>
+                    <img src="img/twit.png" height="400"><br>
+                    <h3>create a new app</h3>
+                </section>
+                <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                    <h3>Gather tokens and keys</h3><br>
+                    <img src="img/tw_tokens.png" height="400"><br>
+                </section>
+                <section>
+                    <b><p>Update code in code/twitter-ard/app.js</p></b></br>
+                    <code class="hljs" data-trim contenteditable><pre>
 var client = new Twitter({
     consumer_key: 'Enter Here',
     consumer_secret: 'Enter Here',
@@ -265,32 +269,32 @@ var client = new Twitter({
                         </code>
                 </section>
 
-                    
 
-                    
-                    <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+
+
+                <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
                     <h2 class="intro">From the terminal:</h2>
                     <br>
                     <h2 class="intro">'cd twitter-ard'</h2>
                     <br>
                     <h2 class="intro">'node app.js'</h2>
-            </section>
-            <section data-background="img/terminal.gif" data-background-size="1200px">
-            </section>
-            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                <h2 class="intro">From the terminal:</h2>
-                <br>
-                <h2 class="intro">'cd twitter-ard-location'</h2>
-                <br>
-                <h2 class="intro">'node app.js'</h2>
-            </section>
-            <section>
-                <p>Twitter API Reference</i>
-                </p>
-                <br>
-                <a href="https://dev.twitter.com/streaming/overview/request-parameters#language">Here</a>
-                <br>
-            </section>
+                </section>
+                <section data-background="img/terminal.gif" data-background-size="1200px">
+                </section>
+                <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                    <h2 class="intro">From the terminal:</h2>
+                    <br>
+                    <h2 class="intro">'cd twitter-ard-location'</h2>
+                    <br>
+                    <h2 class="intro">'node app.js'</h2>
+                </section>
+                <section>
+                    <p>Twitter API Reference</i>
+                    </p>
+                    <br>
+                    <a href="https://dev.twitter.com/streaming/overview/request-parameters#language">Here</a>
+                    <br>
+                </section>
             </section>
             <section>
                 <section>
@@ -385,60 +389,63 @@ var client = new Twitter({
                 </section>
             </section>
             </section>
-                              <section>
-                        <p>Sign up for <a href="https://signup.heroku.com/dc">Heroku</a></p>
-                    </section>
-                    <section>
-                        <p>Download the Heroku CLI <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up"></a></p><br><p class="fragment">Run 'heroku login' from the terminal</p>
-                    </section>
+            <section>
+                <p>Sign up for <a href="https://signup.heroku.com/dc">Heroku</a></p>
+            </section>
+            <section>
+                <p>Download the Heroku CLI
+                    <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up"></a>
+                </p><br>
+                <p class="fragment">Run 'heroku login' from the terminal</p>
+            </section>
         </div>
     </div>
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
     <script>
-    // Full list of configuration options available at:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
 
-        transition: 'convex', // none/fade/slide/convex/concave/zoom
+            transition: 'convex', // none/fade/slide/convex/concave/zoom
 
-        // Optional reveal.js plugins
-        dependencies: [{
-            src: 'lib/js/classList.js',
-            condition: function() {
-                return !document.body.classList;
-            }
-        }, {
-            src: 'plugin/markdown/marked.js',
-            condition: function() {
-                return !!document.querySelector('[data-markdown]');
-            }
-        }, {
-            src: 'plugin/markdown/markdown.js',
-            condition: function() {
-                return !!document.querySelector('[data-markdown]');
-            }
-        }, {
-            src: 'plugin/highlight/highlight.js',
-            async: true,
-            condition: function() {
-                return !!document.querySelector('pre code');
-            },
-            callback: function() {
-                hljs.initHighlightingOnLoad();
-            }
-        }, {
-            src: 'plugin/zoom-js/zoom.js',
-            async: true
-        }, {
-            src: 'plugin/notes/notes.js',
-            async: true
-        }]
-    });
+            // Optional reveal.js plugins
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                condition: function() {
+                    return !!document.querySelector('pre code');
+                },
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }]
+        });
     </script>
 </body>
 
