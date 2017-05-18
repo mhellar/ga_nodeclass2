@@ -94,7 +94,7 @@ void main( void ) {
     var incoming2;
 
     //Websocket Stuff
-    var socket = io.connect('//localhost:3000');
+    var socket = io.connect('//localhost:3001');
         socket.on('mysocket', function(data) {
                 // console.log(data);
                 var res = data.split(",");

@@ -4,12 +4,12 @@ var parsers = SerialPort.parsers;
 
 var express = require('express');
 var app = express();
-var server = app.listen(3000);
+var server = app.listen(3001);
 app.use(express.static('public'));
 
 var io = require('socket.io')(server);
 
-var port = new SerialPort('/dev/cu.HC-05-DevB-1', {
+var port = new SerialPort('/dev/cu.HC-05-DevB', {
   baudrate: 9600,
   parser: parsers.readline('\r\n')
 });
