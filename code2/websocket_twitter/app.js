@@ -8,7 +8,7 @@ var Twitter = require('twitter')
 
 //instantiate a server on port 3000
 
-var server = app.listen(process.env.PORT || 5000);
+var server = app.listen(3000);
 var io = require('socket.io')(server);
 
 //expose the local public folder for inluding files js, css etc..
