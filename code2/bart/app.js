@@ -16,15 +16,16 @@ var io = require('socket.io')(server);
 app.use(express.static('public'));
 
 //create a bart oobject that queries the API every 5 seconds
-var bart = require('bart').createClient({"interval":20000});
+var bart = require('bart').createClient({ "interval": 20000 });
 
 //let's make a function that speaks
-function speak(whatosay){
-  //speak the string
-  exec(say + whatosay);
-  //log it to the console
-  console.log(whatosay)
+function speak(whatosay) {
+    //speak the string
+    exec(say + whatosay);
+    //log it to the console
+    console.log(whatosay)
 }
+
 
 //on a request to / serve index.html
 app.get('/', function(req, res) {
@@ -33,21 +34,21 @@ app.get('/', function(req, res) {
 
 
 
-function queryBart(){
-//choose which bart staion to to monitor, station abbreviations are here: http://api.bart.gov/docs/overview/abbrev.aspx
-bart.on('powl', function(estimates){
-   //log the results to the console
-   console.log(estimates); 
+function queryBart() {
+    //choose which bart staion to to monitor, station abbreviations are here: http://api.bart.gov/docs/overview/abbrev.aspx
+    bart.on('powl', function(estimates) {
+            //log the results to the console
+            console.log(estimates);
 
-   
-   // store the results in some variables
-   var nextTrainNorth = "next train in " + estimates[0].minutes;
-   var destSouth = "Dest: " + estimates[0].destination;
-   io.sockets.emit('mysocket',nextTrainNorth + " minutes" + " destination is " + estimates[5].destination + " Direction is " + estimates[5].direction);
-   // call the function
-   speak(nextTrainNorth + " minutes" + " destination is " + estimates[5].destination + " Direction is " + estimates[5].direction);
-   }, 1000);
-}
+            // store the results in some variables
+            var nextTrainNorth = "next train in " + estimates[0].minutes;
+            var destSouth = "Dest: " + estimates[0].destination;
+            io.sockets.emit('mysocket', nextTrainNorth + " minutes" + " destination is " + estimates[5].destination + " Direction is " + estimates[5].direction);
+            // call the function
+            //  speak(nextTrainNorth + " minutes" + " destination is " + estimates[5].destination + " Direction is " + estimates[5].direction);
+            //  }, 1000);
+        }
+    }
 
-queryBart();
 
+    queryBart();
