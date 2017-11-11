@@ -37,7 +37,7 @@ function draw() {
     text(Math.floor(k), 0, 128);
     text(Math.floor(l), 0, 160);
     text(Math.floor(r), 0, 192);
-
+    text(Math.floor(m), 0, 224);
     // Draw a circle
     stroke(50);
     // fill(x, x, x);
