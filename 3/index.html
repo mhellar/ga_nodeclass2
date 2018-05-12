@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>NodeJS: Day 3</title>
+    <title>Internet of Things</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,151 +30,236 @@
         <div class="slides">
             <section>
                 <figure>
-                    <h2 class="intro">NodeJS: Day 3</h2 class="intro">
-                    <h2 class="intro">NodeJS: Day 3</h2 class="intro">
-                    <h2 class="intro">NodeJS: Day 3</h2 class="intro">
-                    <h2 class="intro">NodeJS: Day 3</h2 class="intro">
+                    <h2 class="intro">NodeJS: Day3</h2 class="intro">
+                    <h2 class="intro">NodeJS: Day3</h2 class="intro">
+                    <h2 class="intro">NodeJS: Day3</h2 class="intro">
+                    <h2 class="intro">NodeJS: Day3</h2 class="intro">
                 </figure>
             </section>
 
             <section data-background="img/72-points-mesh.svg" data-background-transition="zoom">
-                <p><b>Grab the code here: <br><a href="http://bit.ly/2zBvHXI">http://bit.ly/2zBvHXI</a></b></p>
+                <p><b>Grab the code here: <br><a href="https://bit.ly/2Hy1XSO">https://bit.ly/2Hy1XSO</a></b></p>
             </section>
 
 
             <section>
                 <ul>
                     <h3>Topics for Today:</h3>
-                    <li class="fragment">FaceOSC</li>
-                    <li class="fragment">Building an Arduino interface</li>
-                    <li class="fragment">Connecting Arduino to NodeJS</li>
-                    <li class="fragment">Interactive P5 Sketch</li>
-                    <li class="fragment">Hackers Den!</li>
+                    <li class="fragment">Coding Warmup</li>
+                    <li class="fragment">NodeJS and Arduino</li>
+                    <li class="fragment">Serialport Module</li>
+                    <li class="fragment">The Johnny Five Library</li>
+                    <li class="fragment">Twitter Lamp</li>
+                    <li class="fragment">Twitter Button</li>
                 </ul>
             </section>
             <section>
                 <h3>FaceOSC</h3>
-                <img src="img/faceosc.png" height="200">
+                <img src="img/faceosc.png" height="500">
                 <h3>try faceosc</h3>
                 <a href="https://github.com/kylemcdonald/ofxFaceTracker/releases">Download</a>
                 <a href="#" class="navigate-down">
                 </a>
             </section>
             <section>
-                <p>cd faceosc & npm install & node app.js</p>
+                <p>cd 'faceosc' && npm install && node app.js && localhost:3000 in the browser</p>
             </section>
             <section>
-                <p>Building an Arduino Interface</p>
-                <img src="img/joybutton.png" height="400"> </section>
+            <a href="https://www.npmjs.com/package/serialport">Serialport Module</a>
+            </section>
+
+            <section>
+                <p>Connect a potentiometer</p>
+                <img src="img/1.png" height="500">
+                <a href="#" class="navigate-down">
+                </a>
             </section>
             <section>
-                <p>Cut a setion of rainbow wire with 8 wires about 1/2 a foot</p>
-                <p>One one side seperate the wires about 1/2 inch</p>
-                <p>One one other side seperate the wires about 3 inches</p>
+                <p>Connect a potentiometer</p>
+                <img src="img/2.png" height="500">
+
+            </section>
+
+            <section>
+                <p>1: Upload AnalogInOutSerial.ino to arduino from AnalogInOutSerial in the code folder</p><br>
+                <p>2: Run node index.js from the serialbasic from serialbasic in the code folder</p>
+
+                </a>
             </section>
             <section>
-                <p>Cut the wires so they match up to your button holes with some slack</p>
-                <p>Feed them through the button holes in seperate pairs</p>
-                <p>Strip the ends and solder them to the button leads odd on one side even on the other</p>
+                <p>1: Run node index.js from the serialbasic from serial_ws in the code folder</p><br>
+                <p>2: Open web browser go to
+                    <a href="http://localhost:3000"></a>http://localhost:3000</p>
+                </a>
+            </section>
+
+            <section>
+                <img src="img/joystick.png">
             </section>
             <section>
-                <p>Strip the other sides of the wires</p>
-                <p>Solder the odd wires to a pair of 4 header pins</p>
-                <p>Solder the wires to a pair of 4 header pins</p>
+                <h4>Connections</h4>
+                <p>GND -> GND</p>
+                <p>5V -> 5V</p>
+                <p>Vrx -> A1</p>
+                <p>Vry -> A0</p>
+                <p>SW -> 2</p>
             </section>
             <section>
-                <p>Double check the wiring</p>
-                <p>Snap in the buttons</p>
-                <p>Glue the case together</p>
+                <p>Upload joystick with arduino</p>
             </section>
             <section>
-                <p>Connect buttons and joystick:</p>
-                <img src="img/joybutton.png" height="400"> </section>
+                <p>cd 'joystick_p5js' && npm install && node app.js && localhost:3000 in the browser</p>
+            </section>
+
+            <section>
+                <p>We will use the smoothiecharts library to plot the joystick data</p>
+                <p><a href="http://smoothiecharts.org/">smoothiecharts.org</a></p>
             </section>
             <section>
-                <p>One side of the buttons connect to GND</p>
-                <p>The other side connect to digital pins 2,3,4,5</p>
+                <p>Open 'serial_ws_joystick_chart' in your text editor. On line 8 of index.js set the serial port to your serial port</p>
             </section>
             <section>
-                <p>Joystick Connections</p>
-                <p>GND to GND</p>
-                <p>5V to 5V</p>
-                <p>5V to 5V</p>
-                <p>VRX to A0</p>
-                <p>VRY to A1</p>
-                <p>SW to Digital Pin 6</p>
+                <p>cd 'serial_ws_joystick_chart' && npm install && node app.js && localhost:3000 in the browser</p>
             </section>
             <section>
-                <p>Double check the wiring</p>
-                <p>Snap in the buttons</p>
-                <p>Glue the case together</p>
+                <p>Use the builder to style the chart</p>
+                <p><a href="http://smoothiecharts.org/builder/">smoothiecharts.org Builder</a></p>
+            </section>
+            <section data-background="img/johnny-five-fb.png" data-background-transition="zoom">
+
+            </section>
+            <section data-background="img/sc_poster.jpg" data-background-size="600px" data-background-transition="zoom">
+
+            </section>
+
+            <section>
+                <p>
+                    Johnny-Five is the original JavaScript Robotics programming framework. Released by Bocoup in 2012, Johnny-Five is maintained by a community of passionate software developers and hardware engineers. Over 75 developers have made contributions towards building
+                    a robust, extensible and composable ecosystem.
+                </p>
+            </section>
+
+            <section data-background="img/led_1.png" data-background-size="1000px" data-background-transition="zoom">
+
+            </section>
+
+            <section>
+                <h3>Starting a new Node app</h3>
+                <ul>
+                    <li>Create a new folder named, 'J5_led_1'</li>
+                    <li class="fragment">Open the terminal</li>
+                    <li class="fragment">type 'cd' & space</li>
+                    <li class="fragment">drag your folder to the terminal and hit return</li>
+                </ul>
             </section>
             <section>
-                <p>Upload _4buttonAndJoystick to Arduino</p>
+
+                <ul>
+                    <li>Now we are in our new folder in the terminal</li>
+                    <li class="fragment">Type 'npm init' & hit return</li>
+                    <li class="fragment">fill out the questions</li>
+                    <li class="fragment">drag your folder onto Sublime Text</li>
+                </ul>
             </section>
             <section>
-                <p>The Node Serialport Module</p><br>
-                <p><a href=" https://www.npmjs.com/package/serialport">Serialport Module</a></p><br>
+                <ul>
+                    <li>type 'npm install johnny-five --save</li>
+                    <li class="fragment">Have a look at the package.json file that was generated</li>
+                    <li class="fragment">This stores metadata about our app</li>
+                </ul>
+            </section>
+
+            <section>
+                <b><p>contents of package.json</p></b></br>
+                <code class="hljs" data-trim contenteditable><pre>
+{
+  "name": "J5_led_1",
+  "version": "1.0.0",
+  "description": "A Johnny Five LED app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "johnny-five": "^0.8.106"
+  }
+}
+</pre>
+                        </code>
+            </section>
+
+            <section>
+                <h3>create a new file, enter the following code and save as index.js in your new folder</h3>
+                <code class="hljs" data-trim contenteditable><pre>
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+  var led = new five.Led(6);
+  led.blink(500);
+});
+</pre>
+                        </code>
             </section>
             <section>
-                <p>Open serialsimple in your text editor</p>
-                <p>Edit line 3 to match the serial port</p>
-                <p>cd serialsimple</p>
-                <p>npm install</p>
-                <p>node index.js</p>
+                <ul>
+                    <li>Upload firmata to arduino</li>
+                    <li class="fragment">run 'node index.js' at the terminal</li>
+                </ul>
             </section>
             <section>
-                <p>Open serial_ws in your text editor</p>
-                <p>Edit line 8 of index.js to match the serial port</p>
-                <p>cd serial_ws</p>
-                <p>npm install</p>
-                <p>node index.js</p>
-                <p>open localhost:3000 in your browser</p>
+                <h3>try a pulse</h3>
+                <code class="hljs" data-trim contenteditable><pre>
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+  var led = new five.Led(6);
+led.pulse(500);
+});
+</pre>
+                        </code>
             </section>
             <section>
-                <p>Open serial_ws_inter_chart in your text editor</p>
-                <p>Edit line 8 of index.js to match the serial port</p>
-                <p>cd serial_ws_inter_chart</p>
-                <p>npm install</p>
-                <p>node index.js</p>
-                <p>open localhost:3000 in your browser</p>
+                <b><p>Led Animations</p></b></br>
+                <code class="hljs" data-trim contenteditable><pre>
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on("ready", function() {
+  var led = new five.Led(6);
+led.pulse({
+  easing: "linear",
+  duration: 3000,
+  cuePoints: [0, 0.2, 0.4, 0.6, 0.8, 1],
+  keyFrames: [0, 10, 0, 50, 0, 255],
+  onstop: function() {
+    console.log("Animation stopped");
+  }
+});
+});
+</pre>
+                        </code>
             </section>
+
             <section>
-                <a href="http://smoothiecharts.org/">Smoothiecharts</a>
+                <p>Reference</i>
+                </p><br>
+                <a href="http://johnny-five.io/api/led/">LED API</a><br>
+                <a href="http://johnny-five.io/api/animation/#segment-properties">Animation API</a><br>
+                <a href="http://johnny-five.io/api/">Full API</a>
+
             </section>
+
             <section>
-                <p>Open interactive_p5js in your text editor</p>
-                <p>Edit line 15 of index.js to match the serial port</p>
-                <p>cd interactive_p5js</p>
-                <p>npm install</p>
-                <p>node index.js</p>
-                <p>open localhost:3000 in your browser</p>
-            </section>
-            <section>
-                <p>Open interactive_p5js_GL in your text editor</p>
-                <p>Edit line 15 of index.js to match the serial port</p>
-                <p>cd interactive_p5js</p>
-                <p>npm install</p>
-                <p>node index.js</p>
-                <p>open localhost:3000 in your browser</p>
-            </section>
-            <section>
-                <p>Form 3 teams</p>
-                <p>Make a copy of one of the templates</p>
-                <p>Build out an interactive project</p>
-                <a href="https://www.moma.org/learn/moma_learning/themes">Some themes if you need</a>
-                <p>Present at 3:30</p>
-            </section>
-            <section>
-                <p>Homework:</p>
-                <p>Make your own interactive for next week</p>
-            </section>
-            <!-- <section>
                 <h3>Project: Twitter Lamp</h3>
                 <img src="img/Twitter_logo_blue.png" height="400"><img src="img/botrobot.jpg" height="400">
             </section>
             <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                <h3>Keep the same circuit</h3>
+                <h3>Make this circuit</h3>
+                <img src="img/led_1.png" height="400">
             </section>
             <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
                 <h3>Go Here:</h3><br>
@@ -198,10 +283,13 @@ var client = new Twitter({
 </pre>
                         </code>
             </section>
-
-
-
-
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <h2 class="intro">From the terminal:</h2>
+                <br>
+                <h2 class="intro">'cd twitter'</h2>
+                <br>
+                <h2 class="intro">'npm install' & 'node app.js'</h2>
+            </section>
             <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
                 <h2 class="intro">From the terminal:</h2>
                 <br>
@@ -225,20 +313,19 @@ var client = new Twitter({
                 <a href="https://dev.twitter.com/streaming/overview/request-parameters#language">Here</a>
                 <br>
             </section>
+
+            <section>
+                <h3>Project: Twitter Button</h3>
+                <img src="img/internet_earth.png" height="400"><img src="img/Push-Button-Switch.jpg" height="400">
+                <a href="#" class="navigate-down">
+                </a>
             </section>
             <section>
-                <section>
-                    <h3>Project: Twitter Button</h3>
-                    <img src="img/internet_earth.png" height="400"><img src="img/Push-Button-Switch.jpg" height="400">
-                    <a href="#" class="navigate-down">
-                    </a>
-                </section>
-                <section>
-                    <img src="img/button.png" height="600">
-                </section>
-                <section>
-                    <b><p>Update code in code/twitter-ard/app.js</p></b></br>
-                    <code class="hljs" data-trim contenteditable><pre>
+                <img src="img/button.png" height="600">
+            </section>
+            <section>
+                <b><p>Update code in code/twitter-ard/app.js</p></b></br>
+                <code class="hljs" data-trim contenteditable><pre>
 var client = new Twitter({
     consumer_key: 'Enter Here',
     consumer_secret: 'Enter Here',
@@ -247,14 +334,46 @@ var client = new Twitter({
 })
 </pre>
                         </code>
-                </section>
-                <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
-                    <h2 class="intro">From the terminal:</h2>
-                    <br>
-                    <h2 class="intro">'cd twitter-button'</h2>
-                    <br>
-                    <h2 class="intro">'node app.js'</h2>
-                </section> -->
+            </section>
+            <section data-background="img/72-points-mesh.svg" data-background-repeat="repeat" data-background-size="100px" data-background-transition="zoom">
+                <h2 class="intro">From the terminal:</h2>
+                <br>
+                <h2 class="intro">'cd twitter-button'</h2>
+                <br>
+                <h2 class="intro">'node app.js'</h2>
+            </section>
+            <section>
+            <h3>Let's hook up the Liquid Crystal Display</h3>
+            <img src="img/LCD_Base.png" height="400"><br>
+            <a href="https://www.arduino.cc/en/Tutorial/HelloWorld">Detailed Reference</a>
+            <a href="#" class="navigate-down">
+                </a>
+            </section>
+            <section>
+            <h3>Unplug your Arduino from USB</h3><br>
+            <h3>Hook up according to the diagram</h3><br>
+            <h3>Call out if you need help!</h3>
+            </section>
+            <section>
+            <section>                        
+                    <h3>Johnny Five Examples</h3>
+                    <a href="#" class="navigate-down">
+                    </a>
+            </section>
+            <section>                        
+                    <h3>Upload Firmata to Arduino</h3>
+            </section>
+            <section>                        
+                    <h3>j5_lcd_weather</h3><br>
+                    <h3>node app.js</h3>
+            </section>    
+            <section>                        
+                    <h3>j5_lcd_bart</h3><br>
+                    <h3>node app.js</h3>
+            </section>  
+            </section>  
+
+
         </div>
     </div>
     <script src="lib/js/head.min.js"></script>
