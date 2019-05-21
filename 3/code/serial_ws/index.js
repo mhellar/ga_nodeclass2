@@ -1,26 +1,35 @@
 var com = require("serialport");
-var app = require('express')();
+var app = require("express")();
 
-var server = app.listen(3000);
-var io = require('socket.io')(server);
+//import serialport module
+var SerialPort = require("serialport");
+var Readline = SerialPort.parsers.Readline;
 
-var serialPort = new com.SerialPort("/dev/tty.usbmodem143721", {
-    baudrate: 9600,
-    parser: com.parsers.readline('\r\n')
+//set parameters for the serialport
+var serialPort = new SerialPort("/dev/tty.usbmodem1421", {
+  baudRate: 9600
 });
+
+//the readline parser will delimit the data on a newline
+var parser = new Readline();
+serialPort.pipe(parser);
+
+//setup a webserver on poert 3000
+var server = app.listen(3000);
+var io = require("socket.io")(server);
 
 //Serve index.html when some make a request of the server
-app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/index.html');
+app.get("/", function(req, res) {
+  res.sendFile(__dirname + "/index.html");
 });
 
-serialPort.on('open', function() {
-    console.log('Port open');
+//send a message when the serialport connects successfully
+serialPort.on("open", function() {
+  console.log("Communication is on!");
 });
 
-serialPort.on('data', function(data) {
-    io.sockets.emit('data',data);
-    console.log(data);
+//when data is recieved log it to the console
+parser.on("data", function(data) {
+  io.sockets.emit("data", data);
+  console.log(data);
 });
-
-
